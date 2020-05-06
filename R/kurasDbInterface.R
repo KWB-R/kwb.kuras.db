@@ -1,9 +1,9 @@
 # kuras_anlageeigenschaft ------------------------------------------------------
 
 #' select records from tblanlageeigenschaft
-#' 
+#'
 #' \code{select} and filter records from tblanlageeigenschaft
-#' 
+#'
 #' @param where WHERE condition
 #' @param where_aeID condition for field \emph{aeID}: Enter a field description here
 #' @param where_aeName condition for field \emph{aeName}: Enter a field description here
@@ -24,39 +24,23 @@
 #' @export
 kuras_anlageeigenschaft <- function(
   where = NULL,
-  ### WHERE condition
   where_aeID = NA,
-  ### condition for field \emph{aeID}: Enter a field description here
   where_aeName = NA,
-  ### condition for field \emph{aeName}: Enter a field description here
   where_aeEinheit = NA,
-  ### condition for field \emph{aeEinheit}: Enter a field description here
   where_aeBeschreibung = NA,
-  ### condition for field \emph{aeBeschreibung}: Enter a field description here
   select = NULL,
-  ### fields/expressions to select
   select_aeID = NA,
-  ### select field \emph{aeID}?
   select_aeName = NA,
-  ### select field \emph{aeName}?
   select_aeEinheit = NA,
-  ### select field \emph{aeEinheit}?
   select_aeBeschreibung = NA,
-  ### select field \emph{aeBeschreibung}?
   orderBy = NULL,
-  ### ORDER BY clause of SQL expression
   orderBy_aeID = NA,
-  ### order by field \emph{aeID}?
   orderBy_aeName = NA,
-  ### order by field \emph{aeName}?
   orderBy_aeEinheit = NA,
-  ### order by field \emph{aeEinheit}?
   orderBy_aeBeschreibung = NA,
-  ### order by field \emph{aeBeschreibung}?
   db = 'KURAS',
   ...
-  ### additional arguments passed to \code{kwb.db::selectFromTable}
-) 
+)
 {
   arguments <- list(
     select = select,
@@ -82,9 +66,9 @@ kuras_anlageeigenschaft <- function(
 # kuras_anlageeigenschaftswert -------------------------------------------------
 
 #' select records from tblanlageeigenschaftswert
-#' 
+#'
 #' \code{select} and filter records from tblanlageeigenschaftswert
-#' 
+#'
 #' @param where WHERE condition
 #' @param where_awID condition for field \emph{awID}: Enter a field description here
 #' @param where_awAnlageID condition for field \emph{awAnlageID}: Enter a field description here
@@ -103,50 +87,31 @@ kuras_anlageeigenschaft <- function(
 #' @param orderBy_awAnlageEigenschaftID order by field \emph{awAnlageEigenschaftID}?
 #' @param orderBy_awZahlwert order by field \emph{awZahlwert}?
 #' @param orderBy_awBeschreibung order by field \emph{awBeschreibung}?
-#' @param db name of ODBC data source, default: \code{"KURAS"} 
+#' @param db name of ODBC data source, default: \code{"KURAS"}
 #' @param \dots additional arguments passed to \code{kwb.db::selectFromTable}
 #' @export
 kuras_anlageeigenschaftswert <- function(
   where = NULL,
-  ### WHERE condition
   where_awID = NA,
-  ### condition for field \emph{awID}: Enter a field description here
   where_awAnlageID = NA,
-  ### condition for field \emph{awAnlageID}: Enter a field description here
   where_awAnlageEigenschaftID = NA,
-  ### condition for field \emph{awAnlageEigenschaftID}: Enter a field description here
   where_awZahlwert = NA,
-  ### condition for field \emph{awZahlwert}: Enter a field description here
   where_awBeschreibung = NA,
-  ### condition for field \emph{awBeschreibung}: Enter a field description here
   select = NULL,
-  ### fields/expressions to select
   select_awID = NA,
-  ### select field \emph{awID}?
   select_awAnlageID = NA,
-  ### select field \emph{awAnlageID}?
   select_awAnlageEigenschaftID = NA,
-  ### select field \emph{awAnlageEigenschaftID}?
   select_awZahlwert = NA,
-  ### select field \emph{awZahlwert}?
   select_awBeschreibung = NA,
-  ### select field \emph{awBeschreibung}?
   orderBy = NULL,
-  ### ORDER BY clause of SQL expression
   orderBy_awID = NA,
-  ### order by field \emph{awID}?
   orderBy_awAnlageID = NA,
-  ### order by field \emph{awAnlageID}?
   orderBy_awAnlageEigenschaftID = NA,
-  ### order by field \emph{awAnlageEigenschaftID}?
   orderBy_awZahlwert = NA,
-  ### order by field \emph{awZahlwert}?
   orderBy_awBeschreibung = NA,
-  ### order by field \emph{awBeschreibung}?
   db = 'KURAS',
   ...
-  ### additional arguments passed to \code{kwb.db::selectFromTable}
-) 
+)
 {
   arguments <- list(
     select = select,
@@ -175,9 +140,9 @@ kuras_anlageeigenschaftswert <- function(
 # kuras_anlageoderstudie -------------------------------------------------------
 
 #' select records from tblanlageoderstudie
-#' 
+#'
 #' \code{select} and filter records from tblanlageoderstudie
-#' 
+#'
 #' @param where WHERE condition
 #' @param where_aID condition for field \emph{aID}: Enter a field description here
 #' @param where_aName condition for field \emph{aName}: Enter a field description here
@@ -255,153 +220,80 @@ kuras_anlageeigenschaftswert <- function(
 #' @export
 kuras_anlageoderstudie <- function(
   where = NULL,
-  ### WHERE condition
   where_aID = NA,
-  ### condition for field \emph{aID}: Enter a field description here
   where_aName = NA,
-  ### condition for field \emph{aName}: Enter a field description here
   where_aMassnahmenTypID = NA,
-  ### condition for field \emph{aMassnahmenTypID}: Enter a field description here
   where_aMassnahmenEbeneID = NA,
-  ### condition for field \emph{aMassnahmenEbeneID}: Enter a field description here
   where_aStandortID = NA,
-  ### condition for field \emph{aStandortID}: Enter a field description here
   where_aAdresse = NA,
-  ### condition for field \emph{aAdresse}: Enter a field description here
   where_aKoordinateX = NA,
-  ### condition for field \emph{aKoordinateX}: Enter a field description here
   where_aKoordinateY = NA,
-  ### condition for field \emph{aKoordinateY}: Enter a field description here
   where_aEntwaesserungssystem = NA,
-  ### condition for field \emph{aEntwaesserungssystem}: Enter a field description here
   where_aBetreiberInstitutionID = NA,
-  ### condition for field \emph{aBetreiberInstitutionID}: Enter a field description here
   where_aInbetriebnahme = NA,
-  ### condition for field \emph{aInbetriebnahme}: Enter a field description here
   where_aAusserbetriebnahme = NA,
-  ### condition for field \emph{aAusserbetriebnahme}: Enter a field description here
   where_aBetriebsweise = NA,
-  ### condition for field \emph{aBetriebsweise}: Enter a field description here
   where_aBeschreibung = NA,
-  ### condition for field \emph{aBeschreibung}: Enter a field description here
   where_aProjektID = NA,
-  ### condition for field \emph{aProjektID}: Enter a field description here
   where_aFotoOrdner = NA,
-  ### condition for field \emph{aFotoOrdner}: Enter a field description here
   where_aDokumentOrdner = NA,
-  ### condition for field \emph{aDokumentOrdner}: Enter a field description here
   where_aAngelegtAm = NA,
-  ### condition for field \emph{aAngelegtAm}: Enter a field description here
   where_aAngelegtVonPersonID = NA,
-  ### condition for field \emph{aAngelegtVonPersonID}: Enter a field description here
   where_aGeaendert = NA,
-  ### condition for field \emph{aGeaendert}: Enter a field description here
   where_aKoordinatensystem = NA,
-  ### condition for field \emph{aKoordinatensystem}: Enter a field description here
   where_aReferenzGruppeID = NA,
-  ### condition for field \emph{aReferenzGruppeID}: Enter a field description here
   where_aIstStudie = NA,
-  ### condition for field \emph{aIstStudie}: Enter a field description here
   select = NULL,
-  ### fields/expressions to select
   select_aID = NA,
-  ### select field \emph{aID}?
   select_aName = NA,
-  ### select field \emph{aName}?
   select_aMassnahmenTypID = NA,
-  ### select field \emph{aMassnahmenTypID}?
   select_aMassnahmenEbeneID = NA,
-  ### select field \emph{aMassnahmenEbeneID}?
   select_aStandortID = NA,
-  ### select field \emph{aStandortID}?
   select_aAdresse = NA,
-  ### select field \emph{aAdresse}?
   select_aKoordinateX = NA,
-  ### select field \emph{aKoordinateX}?
   select_aKoordinateY = NA,
-  ### select field \emph{aKoordinateY}?
   select_aEntwaesserungssystem = NA,
-  ### select field \emph{aEntwaesserungssystem}?
   select_aBetreiberInstitutionID = NA,
-  ### select field \emph{aBetreiberInstitutionID}?
   select_aInbetriebnahme = NA,
-  ### select field \emph{aInbetriebnahme}?
   select_aAusserbetriebnahme = NA,
-  ### select field \emph{aAusserbetriebnahme}?
   select_aBetriebsweise = NA,
-  ### select field \emph{aBetriebsweise}?
   select_aBeschreibung = NA,
-  ### select field \emph{aBeschreibung}?
   select_aProjektID = NA,
-  ### select field \emph{aProjektID}?
   select_aFotoOrdner = NA,
-  ### select field \emph{aFotoOrdner}?
   select_aDokumentOrdner = NA,
-  ### select field \emph{aDokumentOrdner}?
   select_aAngelegtAm = NA,
-  ### select field \emph{aAngelegtAm}?
   select_aAngelegtVonPersonID = NA,
-  ### select field \emph{aAngelegtVonPersonID}?
   select_aGeaendert = NA,
-  ### select field \emph{aGeaendert}?
   select_aKoordinatensystem = NA,
-  ### select field \emph{aKoordinatensystem}?
   select_aReferenzGruppeID = NA,
-  ### select field \emph{aReferenzGruppeID}?
   select_aIstStudie = NA,
-  ### select field \emph{aIstStudie}?
   orderBy = NULL,
-  ### ORDER BY clause of SQL expression
   orderBy_aID = NA,
-  ### order by field \emph{aID}?
   orderBy_aName = NA,
-  ### order by field \emph{aName}?
   orderBy_aMassnahmenTypID = NA,
-  ### order by field \emph{aMassnahmenTypID}?
   orderBy_aMassnahmenEbeneID = NA,
-  ### order by field \emph{aMassnahmenEbeneID}?
   orderBy_aStandortID = NA,
-  ### order by field \emph{aStandortID}?
   orderBy_aAdresse = NA,
-  ### order by field \emph{aAdresse}?
   orderBy_aKoordinateX = NA,
-  ### order by field \emph{aKoordinateX}?
   orderBy_aKoordinateY = NA,
-  ### order by field \emph{aKoordinateY}?
   orderBy_aEntwaesserungssystem = NA,
-  ### order by field \emph{aEntwaesserungssystem}?
   orderBy_aBetreiberInstitutionID = NA,
-  ### order by field \emph{aBetreiberInstitutionID}?
   orderBy_aInbetriebnahme = NA,
-  ### order by field \emph{aInbetriebnahme}?
   orderBy_aAusserbetriebnahme = NA,
-  ### order by field \emph{aAusserbetriebnahme}?
   orderBy_aBetriebsweise = NA,
-  ### order by field \emph{aBetriebsweise}?
   orderBy_aBeschreibung = NA,
-  ### order by field \emph{aBeschreibung}?
   orderBy_aProjektID = NA,
-  ### order by field \emph{aProjektID}?
   orderBy_aFotoOrdner = NA,
-  ### order by field \emph{aFotoOrdner}?
   orderBy_aDokumentOrdner = NA,
-  ### order by field \emph{aDokumentOrdner}?
   orderBy_aAngelegtAm = NA,
-  ### order by field \emph{aAngelegtAm}?
   orderBy_aAngelegtVonPersonID = NA,
-  ### order by field \emph{aAngelegtVonPersonID}?
   orderBy_aGeaendert = NA,
-  ### order by field \emph{aGeaendert}?
   orderBy_aKoordinatensystem = NA,
-  ### order by field \emph{aKoordinatensystem}?
   orderBy_aReferenzGruppeID = NA,
-  ### order by field \emph{aReferenzGruppeID}?
   orderBy_aIstStudie = NA,
-  ### order by field \emph{aIstStudie}?
   db = 'KURAS',
   ...
-  ### additional arguments passed to \code{kwb.db::selectFromTable}
-) 
+)
 {
   arguments <- list(
     select = select,
@@ -484,9 +376,9 @@ kuras_anlageoderstudie <- function(
 # kuras_effekt -----------------------------------------------------------------
 
 #' select records from tbleffekt
-#' 
+#'
 #' \code{select} and filter records from tbleffekt
-#' 
+#'
 #' @param where WHERE condition
 #' @param where_eID condition for field \emph{eID}: Enter a field description here
 #' @param where_eName condition for field \emph{eName}: Enter a field description here
@@ -499,38 +391,25 @@ kuras_anlageoderstudie <- function(
 #' @param orderBy_eID order by field \emph{eID}?
 #' @param orderBy_eName order by field \emph{eName}?
 #' @param orderBy_eBeschreibung order by field \emph{eBeschreibung}?
-#' @param db name of ODBC data source, default: \code{"KURAS"} 
+#' @param db name of ODBC data source, default: \code{"KURAS"}
 #' @param \dots additional arguments passed to \code{kwb.db::selectFromTable}
 #' @export
 kuras_effekt <- function(
   where = NULL,
-  ### WHERE condition
   where_eID = NA,
-  ### condition for field \emph{eID}: Enter a field description here
   where_eName = NA,
-  ### condition for field \emph{eName}: Enter a field description here
   where_eBeschreibung = NA,
-  ### condition for field \emph{eBeschreibung}: Enter a field description here
   select = NULL,
-  ### fields/expressions to select
   select_eID = NA,
-  ### select field \emph{eID}?
   select_eName = NA,
-  ### select field \emph{eName}?
   select_eBeschreibung = NA,
-  ### select field \emph{eBeschreibung}?
   orderBy = NULL,
-  ### ORDER BY clause of SQL expression
   orderBy_eID = NA,
-  ### order by field \emph{eID}?
   orderBy_eName = NA,
-  ### order by field \emph{eName}?
   orderBy_eBeschreibung = NA,
-  ### order by field \emph{eBeschreibung}?
   db = 'KURAS',
   ...
-  ### additional arguments passed to \code{kwb.db::selectFromTable}
-) 
+)
 {
   arguments <- list(
     select = select,
@@ -553,9 +432,9 @@ kuras_effekt <- function(
 # kuras_indikator --------------------------------------------------------------
 
 #' select records from tblindikator
-#' 
+#'
 #' \code{select} and filter records from tblindikator
-#' 
+#'
 #' @param where WHERE condition
 #' @param where_iID condition for field \emph{iID}: Enter a field description here
 #' @param where_iEffektID condition for field \emph{iEffektID}: Enter a field description here
@@ -583,68 +462,41 @@ kuras_effekt <- function(
 #' @param orderBy_iAngelegtAm order by field \emph{iAngelegtAm}?
 #' @param orderBy_iAngelegtVonPersonID order by field \emph{iAngelegtVonPersonID}?
 #' @param orderBy_iGeaendert order by field \emph{iGeaendert}?
-#' @param db name of ODBC data source, default: \code{"KURAS"} 
+#' @param db name of ODBC data source, default: \code{"KURAS"}
 #' @param \dots additional arguments passed to \code{kwb.db::selectFromTable}
 #' @export
 kuras_indikator <- function(
   where = NULL,
-  ### WHERE condition
   where_iID = NA,
-  ### condition for field \emph{iID}: Enter a field description here
   where_iEffektID = NA,
-  ### condition for field \emph{iEffektID}: Enter a field description here
   where_iName = NA,
-  ### condition for field \emph{iName}: Enter a field description here
   where_iEinheit = NA,
-  ### condition for field \emph{iEinheit}: Enter a field description here
   where_iBeschreibung = NA,
-  ### condition for field \emph{iBeschreibung}: Enter a field description here
   where_iAngelegtAm = NA,
-  ### condition for field \emph{iAngelegtAm}: Enter a field description here
   where_iAngelegtVonPersonID = NA,
-  ### condition for field \emph{iAngelegtVonPersonID}: Enter a field description here
   where_iGeaendert = NA,
-  ### condition for field \emph{iGeaendert}: Enter a field description here
   select = NULL,
-  ### fields/expressions to select
   select_iID = NA,
-  ### select field \emph{iID}?
   select_iEffektID = NA,
-  ### select field \emph{iEffektID}?
   select_iName = NA,
-  ### select field \emph{iName}?
   select_iEinheit = NA,
-  ### select field \emph{iEinheit}?
   select_iBeschreibung = NA,
-  ### select field \emph{iBeschreibung}?
   select_iAngelegtAm = NA,
-  ### select field \emph{iAngelegtAm}?
   select_iAngelegtVonPersonID = NA,
-  ### select field \emph{iAngelegtVonPersonID}?
   select_iGeaendert = NA,
-  ### select field \emph{iGeaendert}?
   orderBy = NULL,
-  ### ORDER BY clause of SQL expression
   orderBy_iID = NA,
-  ### order by field \emph{iID}?
   orderBy_iEffektID = NA,
-  ### order by field \emph{iEffektID}?
   orderBy_iName = NA,
-  ### order by field \emph{iName}?
   orderBy_iEinheit = NA,
-  ### order by field \emph{iEinheit}?
   orderBy_iBeschreibung = NA,
-  ### order by field \emph{iBeschreibung}?
   orderBy_iAngelegtAm = NA,
-  ### order by field \emph{iAngelegtAm}?
   orderBy_iAngelegtVonPersonID = NA,
-  ### order by field \emph{iAngelegtVonPersonID}?
   orderBy_iGeaendert = NA,
-  ### order by field \emph{iGeaendert}?
   db = 'KURAS',
   ...
-  ### additional arguments passed to \code{kwb.db::selectFromTable}
-) 
+
+)
 {
   arguments <- list(
     select = select,
@@ -682,9 +534,9 @@ kuras_indikator <- function(
 # kuras_indikatorwert ----------------------------------------------------------
 
 #' select records from tblindikatorwert
-#' 
+#'
 #' \code{select} and filter records from tblindikatorwert
-#' 
+#'
 #' @param where WHERE condition
 #' @param where_iwID condition for field \emph{iwID}: Enter a field description here
 #' @param where_iwAnlageID condition for field \emph{iwAnlageID}: Enter a field description here
@@ -727,98 +579,56 @@ kuras_indikator <- function(
 #' @param orderBy_iwZeitbezugBeginn order by field \emph{iwZeitbezugBeginn}?
 #' @param orderBy_iwZeitbezugEnde order by field \emph{iwZeitbezugEnde}?
 #' @param orderBy_iwErhebungsmethode order by field \emph{iwErhebungsmethode}?
-#' @param db name of ODBC data source, default: \code{"KURAS"} 
+#' @param db name of ODBC data source, default: \code{"KURAS"}
 #' @param \dots additional arguments passed to \code{kwb.db::selectFromTable}
 #' @export
 kuras_indikatorwert <- function(
   where = NULL,
-  ### WHERE condition
   where_iwID = NA,
-  ### condition for field \emph{iwID}: Enter a field description here
   where_iwAnlageID = NA,
-  ### condition for field \emph{iwAnlageID}: Enter a field description here
   where_iwIndikatorID = NA,
-  ### condition for field \emph{iwIndikatorID}: Enter a field description here
   where_iwReferenzGruppeID = NA,
-  ### condition for field \emph{iwReferenzGruppeID}: Enter a field description here
   where_iwMittelwert = NA,
-  ### condition for field \emph{iwMittelwert}: Enter a field description here
   where_iwMinWert = NA,
-  ### condition for field \emph{iwMinWert}: Enter a field description here
   where_iwMaxWert = NA,
-  ### condition for field \emph{iwMaxWert}: Enter a field description here
   where_iwMedian = NA,
-  ### condition for field \emph{iwMedian}: Enter a field description here
   where_iwStandardabweichung = NA,
-  ### condition for field \emph{iwStandardabweichung}: Enter a field description here
   where_iwAnzahlWerte = NA,
-  ### condition for field \emph{iwAnzahlWerte}: Enter a field description here
   where_iwZeitbezugBeginn = NA,
-  ### condition for field \emph{iwZeitbezugBeginn}: Enter a field description here
   where_iwZeitbezugEnde = NA,
-  ### condition for field \emph{iwZeitbezugEnde}: Enter a field description here
   where_iwErhebungsmethode = NA,
-  ### condition for field \emph{iwErhebungsmethode}: Enter a field description here
   select = NULL,
-  ### fields/expressions to select
   select_iwID = NA,
-  ### select field \emph{iwID}?
   select_iwAnlageID = NA,
-  ### select field \emph{iwAnlageID}?
   select_iwIndikatorID = NA,
-  ### select field \emph{iwIndikatorID}?
   select_iwReferenzGruppeID = NA,
-  ### select field \emph{iwReferenzGruppeID}?
   select_iwMittelwert = NA,
-  ### select field \emph{iwMittelwert}?
   select_iwMinWert = NA,
-  ### select field \emph{iwMinWert}?
   select_iwMaxWert = NA,
-  ### select field \emph{iwMaxWert}?
   select_iwMedian = NA,
-  ### select field \emph{iwMedian}?
   select_iwStandardabweichung = NA,
-  ### select field \emph{iwStandardabweichung}?
   select_iwAnzahlWerte = NA,
-  ### select field \emph{iwAnzahlWerte}?
   select_iwZeitbezugBeginn = NA,
-  ### select field \emph{iwZeitbezugBeginn}?
   select_iwZeitbezugEnde = NA,
-  ### select field \emph{iwZeitbezugEnde}?
   select_iwErhebungsmethode = NA,
-  ### select field \emph{iwErhebungsmethode}?
   orderBy = NULL,
-  ### ORDER BY clause of SQL expression
   orderBy_iwID = NA,
-  ### order by field \emph{iwID}?
   orderBy_iwAnlageID = NA,
-  ### order by field \emph{iwAnlageID}?
   orderBy_iwIndikatorID = NA,
-  ### order by field \emph{iwIndikatorID}?
   orderBy_iwReferenzGruppeID = NA,
-  ### order by field \emph{iwReferenzGruppeID}?
   orderBy_iwMittelwert = NA,
-  ### order by field \emph{iwMittelwert}?
   orderBy_iwMinWert = NA,
-  ### order by field \emph{iwMinWert}?
   orderBy_iwMaxWert = NA,
-  ### order by field \emph{iwMaxWert}?
   orderBy_iwMedian = NA,
-  ### order by field \emph{iwMedian}?
   orderBy_iwStandardabweichung = NA,
-  ### order by field \emph{iwStandardabweichung}?
   orderBy_iwAnzahlWerte = NA,
-  ### order by field \emph{iwAnzahlWerte}?
   orderBy_iwZeitbezugBeginn = NA,
-  ### order by field \emph{iwZeitbezugBeginn}?
   orderBy_iwZeitbezugEnde = NA,
-  ### order by field \emph{iwZeitbezugEnde}?
   orderBy_iwErhebungsmethode = NA,
-  ### order by field \emph{iwErhebungsmethode}?
   db = 'KURAS',
   ...
-  ### additional arguments passed to \code{kwb.db::selectFromTable}
-) 
+
+)
 {
   arguments <- list(
     select = select,
@@ -871,9 +681,9 @@ kuras_indikatorwert <- function(
 # kuras_institution ------------------------------------------------------------
 
 #' select records from tblinstitution
-#' 
+#'
 #' \code{select} and filter records from tblinstitution
-#' 
+#'
 #' @param where WHERE condition
 #' @param where_inID condition for field \emph{inID}: Enter a field description here
 #' @param where_inName condition for field \emph{inName}: Enter a field description here
@@ -897,45 +707,26 @@ kuras_indikatorwert <- function(
 #' @export
 kuras_institution <- function(
   where = NULL,
-  ### WHERE condition
   where_inID = NA,
-  ### condition for field \emph{inID}: Enter a field description here
   where_inName = NA,
-  ### condition for field \emph{inName}: Enter a field description here
   where_inKurzname = NA,
-  ### condition for field \emph{inKurzname}: Enter a field description here
   where_inAdresse = NA,
-  ### condition for field \emph{inAdresse}: Enter a field description here
   where_inBeschreibung = NA,
-  ### condition for field \emph{inBeschreibung}: Enter a field description here
   select = NULL,
-  ### fields/expressions to select
   select_inID = NA,
-  ### select field \emph{inID}?
   select_inName = NA,
-  ### select field \emph{inName}?
   select_inKurzname = NA,
-  ### select field \emph{inKurzname}?
   select_inAdresse = NA,
-  ### select field \emph{inAdresse}?
   select_inBeschreibung = NA,
-  ### select field \emph{inBeschreibung}?
   orderBy = NULL,
-  ### ORDER BY clause of SQL expression
   orderBy_inID = NA,
-  ### order by field \emph{inID}?
   orderBy_inName = NA,
-  ### order by field \emph{inName}?
   orderBy_inKurzname = NA,
-  ### order by field \emph{inKurzname}?
   orderBy_inAdresse = NA,
-  ### order by field \emph{inAdresse}?
   orderBy_inBeschreibung = NA,
-  ### order by field \emph{inBeschreibung}?
   db = 'KURAS',
   ...
-  ### additional arguments passed to \code{kwb.db::selectFromTable}
-) 
+)
 {
   arguments <- list(
     select = select,
@@ -964,9 +755,9 @@ kuras_institution <- function(
 # kuras_kommentar --------------------------------------------------------------
 
 #' select records from tblkommentar
-#' 
+#'
 #' \code{select} and filter records from tblkommentar
-#' 
+#'
 #' @param where WHERE condition
 #' @param where_kID condition for field \emph{kID}: Enter a field description here
 #' @param where_kPersonID condition for field \emph{kPersonID}: Enter a field description here
@@ -988,56 +779,34 @@ kuras_institution <- function(
 #' @param orderBy_kBezugstabelle order by field \emph{kBezugstabelle}?
 #' @param orderBy_kDatensatzID order by field \emph{kDatensatzID}?
 #' @param orderBy_kKommentar order by field \emph{kKommentar}?
-#' @param db name of ODBC data source, default: \code{"KURAS"} 
+#' @param db name of ODBC data source, default: \code{"KURAS"}
 #' @param \dots additional arguments passed to \code{kwb.db::selectFromTable}
 #' @export
 kuras_kommentar <- function(
   where = NULL,
-  ### WHERE condition
   where_kID = NA,
-  ### condition for field \emph{kID}: Enter a field description here
   where_kPersonID = NA,
-  ### condition for field \emph{kPersonID}: Enter a field description here
   where_kDatum = NA,
-  ### condition for field \emph{kDatum}: Enter a field description here
   where_kBezugstabelle = NA,
-  ### condition for field \emph{kBezugstabelle}: Enter a field description here
   where_kDatensatzID = NA,
-  ### condition for field \emph{kDatensatzID}: Enter a field description here
   where_kKommentar = NA,
-  ### condition for field \emph{kKommentar}: Enter a field description here
   select = NULL,
-  ### fields/expressions to select
   select_kID = NA,
-  ### select field \emph{kID}?
   select_kPersonID = NA,
-  ### select field \emph{kPersonID}?
   select_kDatum = NA,
-  ### select field \emph{kDatum}?
   select_kBezugstabelle = NA,
-  ### select field \emph{kBezugstabelle}?
   select_kDatensatzID = NA,
-  ### select field \emph{kDatensatzID}?
   select_kKommentar = NA,
-  ### select field \emph{kKommentar}?
   orderBy = NULL,
-  ### ORDER BY clause of SQL expression
   orderBy_kID = NA,
-  ### order by field \emph{kID}?
   orderBy_kPersonID = NA,
-  ### order by field \emph{kPersonID}?
   orderBy_kDatum = NA,
-  ### order by field \emph{kDatum}?
   orderBy_kBezugstabelle = NA,
-  ### order by field \emph{kBezugstabelle}?
   orderBy_kDatensatzID = NA,
-  ### order by field \emph{kDatensatzID}?
   orderBy_kKommentar = NA,
-  ### order by field \emph{kKommentar}?
   db = 'KURAS',
   ...
-  ### additional arguments passed to \code{kwb.db::selectFromTable}
-) 
+)
 {
   arguments <- list(
     select = select,
@@ -1069,9 +838,9 @@ kuras_kommentar <- function(
 # kuras_koordinatensystem ------------------------------------------------------
 
 #' select records from tblkoordinatensystem
-#' 
+#'
 #' \code{select} and filter records from tblkoordinatensystem
-#' 
+#'
 #' @param where WHERE condition
 #' @param where_koID condition for field \emph{koID}: Enter a field description here
 #' @param where_koName condition for field \emph{koName}: Enter a field description here
@@ -1081,32 +850,22 @@ kuras_kommentar <- function(
 #' @param orderBy ORDER BY clause of SQL expression
 #' @param orderBy_koID order by field \emph{koID}?
 #' @param orderBy_koName order by field \emph{koName}?
-#' @param db name of ODBC data source, default: \code{"KURAS"} 
+#' @param db name of ODBC data source, default: \code{"KURAS"}
 #' @param \dots additional arguments passed to \code{kwb.db::selectFromTable}
 #' @export
 kuras_koordinatensystem <- function(
   where = NULL,
-  ### WHERE condition
   where_koID = NA,
-  ### condition for field \emph{koID}: Enter a field description here
   where_koName = NA,
-  ### condition for field \emph{koName}: Enter a field description here
   select = NULL,
-  ### fields/expressions to select
   select_koID = NA,
-  ### select field \emph{koID}?
   select_koName = NA,
-  ### select field \emph{koName}?
   orderBy = NULL,
-  ### ORDER BY clause of SQL expression
   orderBy_koID = NA,
-  ### order by field \emph{koID}?
   orderBy_koName = NA,
-  ### order by field \emph{koName}?
   db = 'KURAS',
   ...
-  ### additional arguments passed to \code{kwb.db::selectFromTable}
-) 
+)
 {
   arguments <- list(
     select = select,
@@ -1126,9 +885,9 @@ kuras_koordinatensystem <- function(
 # kuras_massnahmeebene ---------------------------------------------------------
 
 #' select records from tblmassnahmeebene
-#' 
+#'
 #' \code{select} and filter records from tblmassnahmeebene
-#' 
+#'
 #' @param where WHERE condition
 #' @param where_meID condition for field \emph{meID}: Enter a field description here
 #' @param where_meName condition for field \emph{meName}: Enter a field description here
@@ -1141,38 +900,25 @@ kuras_koordinatensystem <- function(
 #' @param orderBy_meID order by field \emph{meID}?
 #' @param orderBy_meName order by field \emph{meName}?
 #' @param orderBy_meBeschreibung order by field \emph{meBeschreibung}?
-#' @param db name of ODBC data source, default: \code{"KURAS"} 
+#' @param db name of ODBC data source, default: \code{"KURAS"}
 #' @param \dots additional arguments passed to \code{kwb.db::selectFromTable}
 #' @export
 kuras_massnahmeebene <- function(
   where = NULL,
-  ### WHERE condition
   where_meID = NA,
-  ### condition for field \emph{meID}: Enter a field description here
   where_meName = NA,
-  ### condition for field \emph{meName}: Enter a field description here
   where_meBeschreibung = NA,
-  ### condition for field \emph{meBeschreibung}: Enter a field description here
   select = NULL,
-  ### fields/expressions to select
   select_meID = NA,
-  ### select field \emph{meID}?
   select_meName = NA,
-  ### select field \emph{meName}?
   select_meBeschreibung = NA,
-  ### select field \emph{meBeschreibung}?
   orderBy = NULL,
-  ### ORDER BY clause of SQL expression
   orderBy_meID = NA,
-  ### order by field \emph{meID}?
   orderBy_meName = NA,
-  ### order by field \emph{meName}?
   orderBy_meBeschreibung = NA,
-  ### order by field \emph{meBeschreibung}?
   db = 'KURAS',
   ...
-  ### additional arguments passed to \code{kwb.db::selectFromTable}
-) 
+)
 {
   arguments <- list(
     select = select,
@@ -1195,9 +941,9 @@ kuras_massnahmeebene <- function(
 # kuras_massnahmenkategorie ----------------------------------------------------
 
 #' select records from tblmassnahmenkategorie
-#' 
+#'
 #' \code{select} and filter records from tblmassnahmenkategorie
-#' 
+#'
 #' @param where WHERE condition
 #' @param where_mkID condition for field \emph{mkID}: Enter a field description here
 #' @param where_mkName condition for field \emph{mkName}: Enter a field description here
@@ -1207,32 +953,22 @@ kuras_massnahmeebene <- function(
 #' @param orderBy ORDER BY clause of SQL expression
 #' @param orderBy_mkID order by field \emph{mkID}?
 #' @param orderBy_mkName order by field \emph{mkName}?
-#' @param db name of ODBC data source, default: \code{"KURAS"} 
+#' @param db name of ODBC data source, default: \code{"KURAS"}
 #' @param \dots additional arguments passed to \code{kwb.db::selectFromTable}
 #' @export
 kuras_massnahmenkategorie <- function(
   where = NULL,
-  ### WHERE condition
   where_mkID = NA,
-  ### condition for field \emph{mkID}: Enter a field description here
   where_mkName = NA,
-  ### condition for field \emph{mkName}: Enter a field description here
   select = NULL,
-  ### fields/expressions to select
   select_mkID = NA,
-  ### select field \emph{mkID}?
   select_mkName = NA,
-  ### select field \emph{mkName}?
   orderBy = NULL,
-  ### ORDER BY clause of SQL expression
   orderBy_mkID = NA,
-  ### order by field \emph{mkID}?
   orderBy_mkName = NA,
-  ### order by field \emph{mkName}?
   db = 'KURAS',
   ...
-  ### additional arguments passed to \code{kwb.db::selectFromTable}
-) 
+)
 {
   arguments <- list(
     select = select,
@@ -1252,9 +988,9 @@ kuras_massnahmenkategorie <- function(
 # kuras_massnahmetyp -----------------------------------------------------------
 
 #' select records from tblmassnahmetyp
-#' 
+#'
 #' \code{select} and filter records from tblmassnahmetyp
-#' 
+#'
 #' @param where WHERE condition
 #' @param where_mID condition for field \emph{mID}: Enter a field description here
 #' @param where_mName condition for field \emph{mName}: Enter a field description here
@@ -1270,44 +1006,28 @@ kuras_massnahmenkategorie <- function(
 #' @param orderBy_mName order by field \emph{mName}?
 #' @param orderBy_mBeschreibung order by field \emph{mBeschreibung}?
 #' @param orderBy_mMassnahmenKategorieID order by field \emph{mMassnahmenKategorieID}?
-#' @param db name of ODBC data source, default: \code{"KURAS"} 
+#' @param db name of ODBC data source, default: \code{"KURAS"}
 #' @param \dots additional arguments passed to \code{kwb.db::selectFromTable}
 #' @export
 kuras_massnahmetyp <- function(
   where = NULL,
-  ### WHERE condition
   where_mID = NA,
-  ### condition for field \emph{mID}: Enter a field description here
   where_mName = NA,
-  ### condition for field \emph{mName}: Enter a field description here
   where_mBeschreibung = NA,
-  ### condition for field \emph{mBeschreibung}: Enter a field description here
   where_mMassnahmenKategorieID = NA,
-  ### condition for field \emph{mMassnahmenKategorieID}: Enter a field description here
   select = NULL,
-  ### fields/expressions to select
   select_mID = NA,
-  ### select field \emph{mID}?
   select_mName = NA,
-  ### select field \emph{mName}?
   select_mBeschreibung = NA,
-  ### select field \emph{mBeschreibung}?
   select_mMassnahmenKategorieID = NA,
-  ### select field \emph{mMassnahmenKategorieID}?
   orderBy = NULL,
-  ### ORDER BY clause of SQL expression
   orderBy_mID = NA,
-  ### order by field \emph{mID}?
   orderBy_mName = NA,
-  ### order by field \emph{mName}?
   orderBy_mBeschreibung = NA,
-  ### order by field \emph{mBeschreibung}?
   orderBy_mMassnahmenKategorieID = NA,
-  ### order by field \emph{mMassnahmenKategorieID}?
   db = 'KURAS',
   ...
-  ### additional arguments passed to \code{kwb.db::selectFromTable}
-) 
+)
 {
   arguments <- list(
     select = select,
@@ -1333,9 +1053,9 @@ kuras_massnahmetyp <- function(
 # kuras_person -----------------------------------------------------------------
 
 #' select records from tblperson
-#' 
+#'
 #' \code{select} and filter records from tblperson
-#' 
+#'
 #' @param where WHERE condition
 #' @param where_pnID condition for field \emph{pnID}: Enter a field description here
 #' @param where_pnInitialien condition for field \emph{pnInitialien}: Enter a field description here
@@ -1360,62 +1080,37 @@ kuras_massnahmetyp <- function(
 #' @param orderBy_pnInstitutionID order by field \emph{pnInstitutionID}?
 #' @param orderBy_pnAdresse order by field \emph{pnAdresse}?
 #' @param orderBy_pnTelefon order by field \emph{pnTelefon}?
-#' @param db name of ODBC data source, default: \code{"KURAS"} 
+#' @param db name of ODBC data source, default: \code{"KURAS"}
 #' @param \dots additional arguments passed to \code{kwb.db::selectFromTable}
 #' @export
 kuras_person <- function(
   where = NULL,
-  ### WHERE condition
   where_pnID = NA,
-  ### condition for field \emph{pnID}: Enter a field description here
   where_pnInitialien = NA,
-  ### condition for field \emph{pnInitialien}: Enter a field description here
   where_pnVorname = NA,
-  ### condition for field \emph{pnVorname}: Enter a field description here
   where_pnNachname = NA,
-  ### condition for field \emph{pnNachname}: Enter a field description here
   where_pnInstitutionID = NA,
-  ### condition for field \emph{pnInstitutionID}: Enter a field description here
   where_pnAdresse = NA,
-  ### condition for field \emph{pnAdresse}: Enter a field description here
   where_pnTelefon = NA,
-  ### condition for field \emph{pnTelefon}: Enter a field description here
   select = NULL,
-  ### fields/expressions to select
   select_pnID = NA,
-  ### select field \emph{pnID}?
   select_pnInitialien = NA,
-  ### select field \emph{pnInitialien}?
   select_pnVorname = NA,
-  ### select field \emph{pnVorname}?
   select_pnNachname = NA,
-  ### select field \emph{pnNachname}?
   select_pnInstitutionID = NA,
-  ### select field \emph{pnInstitutionID}?
   select_pnAdresse = NA,
-  ### select field \emph{pnAdresse}?
   select_pnTelefon = NA,
-  ### select field \emph{pnTelefon}?
   orderBy = NULL,
-  ### ORDER BY clause of SQL expression
   orderBy_pnID = NA,
-  ### order by field \emph{pnID}?
   orderBy_pnInitialien = NA,
-  ### order by field \emph{pnInitialien}?
   orderBy_pnVorname = NA,
-  ### order by field \emph{pnVorname}?
   orderBy_pnNachname = NA,
-  ### order by field \emph{pnNachname}?
   orderBy_pnInstitutionID = NA,
-  ### order by field \emph{pnInstitutionID}?
   orderBy_pnAdresse = NA,
-  ### order by field \emph{pnAdresse}?
   orderBy_pnTelefon = NA,
-  ### order by field \emph{pnTelefon}?
   db = 'KURAS',
   ...
-  ### additional arguments passed to \code{kwb.db::selectFromTable}
-) 
+)
 {
   arguments <- list(
     select = select,
@@ -1450,9 +1145,9 @@ kuras_person <- function(
 # kuras_projekt ----------------------------------------------------------------
 
 #' select records from tblprojekt
-#' 
+#'
 #' \code{select} and filter records from tblprojekt
-#' 
+#'
 #' @param where WHERE condition
 #' @param where_pID condition for field \emph{pID}: Enter a field description here
 #' @param where_pName condition for field \emph{pName}: Enter a field description here
@@ -1480,68 +1175,40 @@ kuras_person <- function(
 #' @param orderBy_pAuftraggeberInstitutionID order by field \emph{pAuftraggeberInstitutionID}?
 #' @param orderBy_pBeschreibung order by field \emph{pBeschreibung}?
 #' @param orderBy_pProjektblattnummer order by field \emph{pProjektblattnummer}?
-#' @param db name of ODBC data source, default: \code{"KURAS"} 
+#' @param db name of ODBC data source, default: \code{"KURAS"}
 #' @param \dots additional arguments passed to \code{kwb.db::selectFromTable}
 #' @export
 kuras_projekt <- function(
   where = NULL,
-  ### WHERE condition
   where_pID = NA,
-  ### condition for field \emph{pID}: Enter a field description here
   where_pName = NA,
-  ### condition for field \emph{pName}: Enter a field description here
   where_pBeginn = NA,
-  ### condition for field \emph{pBeginn}: Enter a field description here
   where_pEnde = NA,
-  ### condition for field \emph{pEnde}: Enter a field description here
   where_pDurchfuehrungInstitutionID = NA,
-  ### condition for field \emph{pDurchfuehrungInstitutionID}: Enter a field description here
   where_pAuftraggeberInstitutionID = NA,
-  ### condition for field \emph{pAuftraggeberInstitutionID}: Enter a field description here
   where_pBeschreibung = NA,
-  ### condition for field \emph{pBeschreibung}: Enter a field description here
   where_pProjektblattnummer = NA,
-  ### condition for field \emph{pProjektblattnummer}: Enter a field description here
   select = NULL,
-  ### fields/expressions to select
   select_pID = NA,
-  ### select field \emph{pID}?
   select_pName = NA,
-  ### select field \emph{pName}?
   select_pBeginn = NA,
-  ### select field \emph{pBeginn}?
   select_pEnde = NA,
-  ### select field \emph{pEnde}?
   select_pDurchfuehrungInstitutionID = NA,
-  ### select field \emph{pDurchfuehrungInstitutionID}?
   select_pAuftraggeberInstitutionID = NA,
-  ### select field \emph{pAuftraggeberInstitutionID}?
   select_pBeschreibung = NA,
-  ### select field \emph{pBeschreibung}?
   select_pProjektblattnummer = NA,
-  ### select field \emph{pProjektblattnummer}?
   orderBy = NULL,
-  ### ORDER BY clause of SQL expression
   orderBy_pID = NA,
-  ### order by field \emph{pID}?
   orderBy_pName = NA,
-  ### order by field \emph{pName}?
   orderBy_pBeginn = NA,
-  ### order by field \emph{pBeginn}?
   orderBy_pEnde = NA,
-  ### order by field \emph{pEnde}?
   orderBy_pDurchfuehrungInstitutionID = NA,
-  ### order by field \emph{pDurchfuehrungInstitutionID}?
   orderBy_pAuftraggeberInstitutionID = NA,
-  ### order by field \emph{pAuftraggeberInstitutionID}?
   orderBy_pBeschreibung = NA,
-  ### order by field \emph{pBeschreibung}?
   orderBy_pProjektblattnummer = NA,
-  ### order by field \emph{pProjektblattnummer}?
   db = 'KURAS',
   ...
-  ### additional arguments passed to \code{kwb.db::selectFromTable}
-) 
+)
 {
   arguments <- list(
     select = select,
@@ -1579,9 +1246,9 @@ kuras_projekt <- function(
 # kuras_referenz ---------------------------------------------------------------
 
 #' select records from tblreferenz
-#' 
+#'
 #' \code{select} and filter records from tblreferenz
-#' 
+#'
 #' @param where WHERE condition
 #' @param where_rID condition for field \emph{rID}: Enter a field description here
 #' @param where_rNachname condition for field \emph{rNachname}: Enter a field description here
@@ -1615,80 +1282,46 @@ kuras_projekt <- function(
 #' @param orderBy_rZusatz order by field \emph{rZusatz}?
 #' @param orderBy_rBeschreibung order by field \emph{rBeschreibung}?
 #' @param orderBy_rQualitaet order by field \emph{rQualitaet}?
-#' @param db name of ODBC data source, default: \code{"KURAS"} 
+#' @param db name of ODBC data source, default: \code{"KURAS"}
 #' @param \dots additional arguments passed to \code{kwb.db::selectFromTable}
 #' @export
 kuras_referenz <- function(
   where = NULL,
-  ### WHERE condition
   where_rID = NA,
-  ### condition for field \emph{rID}: Enter a field description here
   where_rNachname = NA,
-  ### condition for field \emph{rNachname}: Enter a field description here
   where_rVorname = NA,
-  ### condition for field \emph{rVorname}: Enter a field description here
   where_rJahr = NA,
-  ### condition for field \emph{rJahr}: Enter a field description here
   where_rArt = NA,
-  ### condition for field \emph{rArt}: Enter a field description here
   where_rTitel = NA,
-  ### condition for field \emph{rTitel}: Enter a field description here
   where_rTitelMedium = NA,
-  ### condition for field \emph{rTitelMedium}: Enter a field description here
   where_rZusatz = NA,
-  ### condition for field \emph{rZusatz}: Enter a field description here
   where_rBeschreibung = NA,
-  ### condition for field \emph{rBeschreibung}: Enter a field description here
   where_rQualitaet = NA,
-  ### condition for field \emph{rQualitaet}: Enter a field description here
   select = NULL,
-  ### fields/expressions to select
   select_rID = NA,
-  ### select field \emph{rID}?
   select_rNachname = NA,
-  ### select field \emph{rNachname}?
   select_rVorname = NA,
-  ### select field \emph{rVorname}?
   select_rJahr = NA,
-  ### select field \emph{rJahr}?
   select_rArt = NA,
-  ### select field \emph{rArt}?
   select_rTitel = NA,
-  ### select field \emph{rTitel}?
   select_rTitelMedium = NA,
-  ### select field \emph{rTitelMedium}?
   select_rZusatz = NA,
-  ### select field \emph{rZusatz}?
   select_rBeschreibung = NA,
-  ### select field \emph{rBeschreibung}?
   select_rQualitaet = NA,
-  ### select field \emph{rQualitaet}?
   orderBy = NULL,
-  ### ORDER BY clause of SQL expression
   orderBy_rID = NA,
-  ### order by field \emph{rID}?
   orderBy_rNachname = NA,
-  ### order by field \emph{rNachname}?
   orderBy_rVorname = NA,
-  ### order by field \emph{rVorname}?
   orderBy_rJahr = NA,
-  ### order by field \emph{rJahr}?
   orderBy_rArt = NA,
-  ### order by field \emph{rArt}?
   orderBy_rTitel = NA,
-  ### order by field \emph{rTitel}?
   orderBy_rTitelMedium = NA,
-  ### order by field \emph{rTitelMedium}?
   orderBy_rZusatz = NA,
-  ### order by field \emph{rZusatz}?
   orderBy_rBeschreibung = NA,
-  ### order by field \emph{rBeschreibung}?
   orderBy_rQualitaet = NA,
-  ### order by field \emph{rQualitaet}?
   db = 'KURAS',
   ...
-  ### additional arguments passed to \code{kwb.db::selectFromTable}
-) 
+)
 {
   arguments <- list(
     select = select,
@@ -1732,35 +1365,28 @@ kuras_referenz <- function(
 # kuras_referenzgruppe ---------------------------------------------------------
 
 #' select records from tblreferenzgruppe
-#' 
+#'
 #' \code{select} and filter records from tblreferenzgruppe
-#' 
+#'
 #' @param where WHERE condition
 #' @param where_rgID condition for field \emph{rgID}: Enter a field description here
 #' @param select fields/expressions to \code{select}
 #' @param select_rgID \code{select} field \emph{rgID}?
 #' @param orderBy ORDER BY clause of SQL expression
 #' @param orderBy_rgID order by field \emph{rgID}?
-#' @param db name of ODBC data source, default: \code{"KURAS"} 
+#' @param db name of ODBC data source, default: \code{"KURAS"}
 #' @param \dots additional arguments passed to \code{kwb.db::selectFromTable}
 #' @export
 kuras_referenzgruppe <- function(
   where = NULL,
-  ### WHERE condition
   where_rgID = NA,
-  ### condition for field \emph{rgID}: Enter a field description here
   select = NULL,
-  ### fields/expressions to select
   select_rgID = NA,
-  ### select field \emph{rgID}?
   orderBy = NULL,
-  ### ORDER BY clause of SQL expression
   orderBy_rgID = NA,
-  ### order by field \emph{rgID}?
   db = 'KURAS',
   ...
-  ### additional arguments passed to \code{kwb.db::selectFromTable}
-) 
+)
 {
   arguments <- list(
     select = select,
@@ -1777,9 +1403,9 @@ kuras_referenzgruppe <- function(
 # kuras_referenzgruppereferenz -------------------------------------------------
 
 #' select records from tblreferenzgruppereferenz
-#' 
+#'
 #' \code{select} and filter records from tblreferenzgruppereferenz
-#' 
+#'
 #' @param where WHERE condition
 #' @param where_rrID condition for field \emph{rrID}: Enter a field description here
 #' @param where_rrReferenzGruppeID condition for field \emph{rrReferenzGruppeID}: Enter a field description here
@@ -1792,38 +1418,25 @@ kuras_referenzgruppe <- function(
 #' @param orderBy_rrID order by field \emph{rrID}?
 #' @param orderBy_rrReferenzGruppeID order by field \emph{rrReferenzGruppeID}?
 #' @param orderBy_rrReferenzID order by field \emph{rrReferenzID}?
-#' @param db name of ODBC data source, default: \code{"KURAS"} 
+#' @param db name of ODBC data source, default: \code{"KURAS"}
 #' @param \dots additional arguments passed to \code{kwb.db::selectFromTable}
 #' @export
 kuras_referenzgruppereferenz <- function(
   where = NULL,
-  ### WHERE condition
   where_rrID = NA,
-  ### condition for field \emph{rrID}: Enter a field description here
   where_rrReferenzGruppeID = NA,
-  ### condition for field \emph{rrReferenzGruppeID}: Enter a field description here
   where_rrReferenzID = NA,
-  ### condition for field \emph{rrReferenzID}: Enter a field description here
   select = NULL,
-  ### fields/expressions to select
   select_rrID = NA,
-  ### select field \emph{rrID}?
   select_rrReferenzGruppeID = NA,
-  ### select field \emph{rrReferenzGruppeID}?
   select_rrReferenzID = NA,
-  ### select field \emph{rrReferenzID}?
   orderBy = NULL,
-  ### ORDER BY clause of SQL expression
   orderBy_rrID = NA,
-  ### order by field \emph{rrID}?
   orderBy_rrReferenzGruppeID = NA,
-  ### order by field \emph{rrReferenzGruppeID}?
   orderBy_rrReferenzID = NA,
-  ### order by field \emph{rrReferenzID}?
   db = 'KURAS',
   ...
-  ### additional arguments passed to \code{kwb.db::selectFromTable}
-) 
+)
 {
   arguments <- list(
     select = select,
@@ -1846,9 +1459,9 @@ kuras_referenzgruppereferenz <- function(
 # kuras_standort ---------------------------------------------------------------
 
 #' select records from tblstandort
-#' 
+#'
 #' \code{select} and filter records from tblstandort
-#' 
+#'
 #' @param where WHERE condition
 #' @param where_oID condition for field \emph{oID}: Enter a field description here
 #' @param where_oName condition for field \emph{oName}: Enter a field description here
@@ -1861,38 +1474,25 @@ kuras_referenzgruppereferenz <- function(
 #' @param orderBy_oID order by field \emph{oID}?
 #' @param orderBy_oName order by field \emph{oName}?
 #' @param orderBy_oOrt order by field \emph{oOrt}?
-#' @param db name of ODBC data source, default: \code{"KURAS"} 
+#' @param db name of ODBC data source, default: \code{"KURAS"}
 #' @param \dots additional arguments passed to \code{kwb.db::selectFromTable}
 #' @export
 kuras_standort <- function(
   where = NULL,
-  ### WHERE condition
   where_oID = NA,
-  ### condition for field \emph{oID}: Enter a field description here
   where_oName = NA,
-  ### condition for field \emph{oName}: Enter a field description here
   where_oOrt = NA,
-  ### condition for field \emph{oOrt}: Enter a field description here
   select = NULL,
-  ### fields/expressions to select
   select_oID = NA,
-  ### select field \emph{oID}?
   select_oName = NA,
-  ### select field \emph{oName}?
   select_oOrt = NA,
-  ### select field \emph{oOrt}?
   orderBy = NULL,
-  ### ORDER BY clause of SQL expression
   orderBy_oID = NA,
-  ### order by field \emph{oID}?
   orderBy_oName = NA,
-  ### order by field \emph{oName}?
   orderBy_oOrt = NA,
-  ### order by field \emph{oOrt}?
   db = 'KURAS',
   ...
-  ### additional arguments passed to \code{kwb.db::selectFromTable}
-) 
+)
 {
   arguments <- list(
     select = select,
