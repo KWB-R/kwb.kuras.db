@@ -17,14 +17,27 @@ knitr::opts_chunk$set(
 )
 ```
 
-Liebe Projektpartner. Wir haben ein R-Paket geschrieben, das die Auswertung
-der Kuras-Datenbank vereinfacht. Dieses Tutorial gibt eine kleine Anleitung.
-Installieren Sie das Paket kwb.kuras.db und alle davon abhängigen Pakete...
+Liebe Projektpartner,
+
+wir haben ein R-Paket geschrieben, das die Auswertung der Kuras-Datenbank
+vereinfacht. Dieses Tutorial gibt eine kleine Anleitung. 
+
+## Voraussetzungen
+
+Sie benötigen Zugriff auf die KURAS Datenbank. Als Projektpartner haben Sie dazu
+eine Anleitung erhalten. Es wird erwartet, dass Sie eine ODBC-Datenquelle mit
+dem Namen "KURAS" auf Ihrem Rechner eingerichtet haben.
+
+## Installation
+
+Installieren Sie das Paket kwb.kuras.db und alle davon abhängigen Pakete:
 
 ```{r}
 # install.packages("remotes")
 remotes::install_github("kwb-r/kwb.kuras.db")
 ```
+
+## Verwendung des Pakets
 
 Laden Sie das Paket kwb.kuras.db:
 
@@ -32,7 +45,7 @@ Laden Sie das Paket kwb.kuras.db:
 library(kwb.kuras.db)
 ```
 
-Das Paket und die abhängigen Pakete werden geladen.
+Das Paket wird geladen.
 
 Das Paket enthält zu jeder Tabelle eine Zugriffsfunktion, deren Name mit 
 "kuras_" beginnt und mit dem Tabellennamen endet. So gibt die Funktion
