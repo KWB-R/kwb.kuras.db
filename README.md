@@ -1,4 +1,4 @@
-[![Appveyor build Status](https://ci.appveyor.com/api/projects/status/github/KWB-R/kwb.kuras.db?branch=master&svg=true)](https://ci.appveyor.com/project/KWB-R/kwb-kuras-db/branch/master)
+[![Appveyor build Status](https://ci.appveyor.com/api/projects/status/1uxkvh113y3sjeki?svg=true)](https://ci.appveyor.com/project/KWB-R/kwb-kuras-db/branch/master)
 [![Travis build Status](https://travis-ci.org/KWB-R/kwb.kuras.db.svg?branch=master)](https://travis-ci.org/KWB-R/kwb.kuras.db)
 [![codecov](https://codecov.io/github/KWB-R/kwb.kuras.db/branch/master/graphs/badge.svg)](https://codecov.io/github/KWB-R/kwb.kuras.db)
 [![Project Status](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
