@@ -1,0 +1,105 @@
+---
+title: "Auswertung der KURAS-Datenbank"
+author: "Hauke Sonnenberg"
+date: "Wednesday, November 12, 2014"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{tutorial}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  eval = FALSE
+)
+```
+
+Liebe Projektpartner. Wir haben ein R-Paket geschrieben, das die Auswertung
+der Kuras-Datenbank vereinfacht. Dieses Tutorial gibt eine kleine Anleitung.
+Installieren Sie das Paket kwb.kuras.db und alle davon abhängigen Pakete...
+
+```{r}
+# install.packages("remotes")
+remotes::install_github("kwb-r/kwb.kuras.db")
+```
+
+Laden Sie das Paket kwb.kuras.db:
+
+```{r}
+library(kwb.kuras.db)
+```
+
+Das Paket und die abhängigen Pakete werden geladen.
+
+Das Paket enthält zu jeder Tabelle eine Zugriffsfunktion, deren Name mit 
+"kuras_" beginnt und mit dem Tabellennamen endet. So gibt die Funktion
+`kuras_effekt` zum Beispiel Zugriff auf die Tabelle tblEffekt in der 
+KURAS-Datenbank.
+
+Mit dem folgenden Aufruf lädt man alle in der Datenbank eingetragenen Effekte
+in die Variable `effekte`:
+
+```{r}
+effekte <- kuras_effekt()
+```
+
+Die Ausgabe zeigt, welche SQL-Abfrage im Hintergrund an die Datenbank geschickt
+wurde und wie viele Zeilen (records) und Spalten (fields) von der Datenbank
+geliefert wurden.
+
+In R existiert die Tabelle nun in Form eines Objekts vom Typ "data.frame".
+Es sieht wie folgt aus:
+
+```{r}
+print(effekte)
+```
+
+Alle Funktionen unterstützen Aufrufparameter, mit denen sich die Datensätze
+filtern und sortieren lassen. 
+
+Mit dem Aufrufparameter `select` lassen sich einzelne Spalten aus- und abwählen.
+Der folgende Aufruf zum Beispiel lädt die Effekte-Tabelle ohne die dritte
+Spalte (eBeschreibung):
+
+```{r}
+effekte <- kuras_effekt(select = -3)
+```
+
+Wir überprüfen das Ergebnis:
+
+```{r}
+print(effekte)
+```
+
+In ähnlicher Weise lassen sich alle definierten Indikatoren mit Hilfe der 
+Funktion `kuras_indikator` laden. Im folgenden werden die Spalten 1 (iID) 
+sowie fünf bis acht gleich ausgelassen:
+
+```{r}
+indikatoren <- kuras_indikator(select = -(c(1, 5:8)))
+```
+
+Und so sieht die Indikatorentabelle nun in R aus:
+
+```{r}
+print(indikatoren)
+```
+
+
+```{r}
+indikatoren.x <- merge(indikatoren, effekte, by.x = "iEffektID", by.y = "eID")
+anlagenOderStudien <- kuras_anlageoderstudie()
+anlagen <- kuras_anlageoderstudie(where_aIstStudie = "=  0")
+studien <- kuras_anlageoderstudie(where_aIstStudie = "= -1")
+stopifnot(nrow(anlagen) + nrow(studien) == nrow(anlagenOderStudien))
+
+cat(sprintf("Es gibt Angaben zu %d Anlagen und zu %d Studien.\n",
+    nrow(anlagen), nrow(studien)))
+
+cat("Aufteilung der Anlagen auf Misch-(M)- und Trenn-(T)-System:\n")
+print(aggregate(anlagen$aID, by = list(EW_System=anlagen$aEntwaesserungssystem), 
+                FUN=length))
+```

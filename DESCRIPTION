@@ -26,5 +26,8 @@ Remotes:
     github::kwb-r/kwb.plot@v0.3.0,
     github::kwb-r/kwb.utils@v0.5.1
 Suggests: 
-    covr
+    covr,
+    knitr,
+    rmarkdown
 RoxygenNote: 7.1.0
+VignetteBuilder: knitr
