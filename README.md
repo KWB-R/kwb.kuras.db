@@ -27,7 +27,6 @@ if (! require("remotes")) {
 }
 
 # Install KWB package 'kwb.kuras.db' from GitHub
-
 remotes::install_github("KWB-R/kwb.kuras.db")
 ```
 
