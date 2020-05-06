@@ -94,12 +94,26 @@
 
     
     
-<p>Liebe Projektpartner. Wir haben ein R-Paket geschrieben, das die Auswertung der Kuras-Datenbank vereinfacht. Dieses Tutorial gibt eine kleine Anleitung. Installieren Sie das Paket kwb.kuras.db und alle davon abhängigen Pakete…</p>
+<p>Liebe Projektpartner,</p>
+<p>wir haben ein R-Paket geschrieben, das die Auswertung der Kuras-Datenbank vereinfacht. Dieses Tutorial gibt eine kleine Anleitung.</p>
+<div id="voraussetzungen" class="section level2">
+<h2 class="hasAnchor">
+<a href="#voraussetzungen" class="anchor"></a>Voraussetzungen</h2>
+<p>Sie benötigen Zugriff auf die KURAS Datenbank. Als Projektpartner haben Sie dazu eine Anleitung erhalten. Es wird erwartet, dass Sie eine ODBC-Datenquelle mit dem Namen “KURAS” auf Ihrem Rechner eingerichtet haben.</p>
+</div>
+<div id="installation" class="section level2">
+<h2 class="hasAnchor">
+<a href="#installation" class="anchor"></a>Installation</h2>
+<p>Installieren Sie das Paket kwb.kuras.db und alle davon abhängigen Pakete:</p>
 <div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="co"># install.packages("remotes")</span>
 <span class="kw pkg">remotes</span><span class="kw ns">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(<span class="st">"kwb-r/kwb.kuras.db"</span>)</pre></body></html></div>
+</div>
+<div id="verwendung-des-pakets" class="section level2">
+<h2 class="hasAnchor">
+<a href="#verwendung-des-pakets" class="anchor"></a>Verwendung des Pakets</h2>
 <p>Laden Sie das Paket kwb.kuras.db:</p>
 <div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">kwb.kuras.db</span>)</pre></body></html></div>
-<p>Das Paket und die abhängigen Pakete werden geladen.</p>
+<p>Das Paket wird geladen.</p>
 <p>Das Paket enthält zu jeder Tabelle eine Zugriffsfunktion, deren Name mit “kuras_” beginnt und mit dem Tabellennamen endet. So gibt die Funktion <code>kuras_effekt</code> zum Beispiel Zugriff auf die Tabelle tblEffekt in der KURAS-Datenbank.</p>
 <p>Mit dem folgenden Aufruf lädt man alle in der Datenbank eingetragenen Effekte in die Variable <code>effekte</code>:</p>
 <div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="no">effekte</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/kuras_effekt.html">kuras_effekt</a></span>()</pre></body></html></div>
@@ -127,11 +141,14 @@
 <span class="fu"><a href="https://rdrr.io/r/base/cat.html">cat</a></span>(<span class="st">"Aufteilung der Anlagen auf Misch-(M)- und Trenn-(T)-System:\n"</span>)
 <span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="fu"><a href="https://rdrr.io/r/stats/aggregate.html">aggregate</a></span>(<span class="no">anlagen</span>$<span class="no">aID</span>, <span class="kw">by</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="kw">EW_System</span><span class="kw">=</span><span class="no">anlagen</span>$<span class="no">aEntwaesserungssystem</span>),
                 <span class="kw">FUN</span><span class="kw">=</span><span class="no">length</span>))</pre></body></html></div>
+</div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
-      </div>
+        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
+    </nav>
+</div>
 
 </div>
 
