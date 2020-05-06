@@ -495,7 +495,6 @@ kuras_indikator <- function(
   orderBy_iGeaendert = NA,
   db = 'KURAS',
   ...
-
 )
 {
   arguments <- list(
@@ -627,7 +626,6 @@ kuras_indikatorwert <- function(
   orderBy_iwErhebungsmethode = NA,
   db = 'KURAS',
   ...
-
 )
 {
   arguments <- list(
