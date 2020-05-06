@@ -17,6 +17,14 @@ URL: https://github.com/KWB-R/kwb.kuras.db
 BugReports: https://github.com/KWB-R/kwb.kuras.db/issues
 Encoding: UTF-8
 LazyData: true
+Imports: 
+    kwb.db,
+    kwb.plot,
+    kwb.utils
+Remotes:
+    github::kwb-r/kwb.db@v0.4.0,
+    github::kwb-r/kwb.plot@v0.3.0,
+    github::kwb-r/kwb.utils@v0.5.1
 Suggests: 
     covr
 RoxygenNote: 7.1.0
