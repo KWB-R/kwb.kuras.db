@@ -1,6 +1,6 @@
 Package: kwb.kuras.db
 Title: Interface to KURAS Database
-Version: 0.1.0.9000
+Version: 0.1.0
 Authors@R: 
     c(person(given = "Hauke",
              family = "Sonnenberg",
@@ -29,5 +29,5 @@ Suggests:
     covr,
     knitr,
     rmarkdown
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
 VignetteBuilder: knitr
