@@ -37,6 +37,12 @@
 <script src="../pkgdown.js"></script>
 
 
+<!-- docsearch -->
+<script src="../docsearch.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.3/docsearch.min.css" integrity="sha256-QOSRU/ra9ActyXkIBbiIB144aDBdtvXBcNc3OTNuX/Q=" crossorigin="anonymous" />
+<link href="../docsearch.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+
 
 
 <meta property="og:title" content="select records from tblkommentar — kuras_kommentar" />
@@ -112,6 +118,12 @@
 </li>
       </ul>
       
+      <form class="navbar-form navbar-right hidden-xs hidden-sm" role="search">
+        <div class="form-group">
+          <input type="search" class="form-control" name="search-input" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        </div>
+      </form>
+      
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
@@ -132,31 +144,31 @@
     <p><code>select</code> and filter records from tblkommentar</p>
     </div>
 
-    <pre class="usage"><span class='fu'>kuras_kommentar</span>(
-  <span class='kw'>where</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>where_kID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_kPersonID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_kDatum</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_kBezugstabelle</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_kDatensatzID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_kKommentar</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>select_kID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_kPersonID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_kDatum</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_kBezugstabelle</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_kDatensatzID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_kKommentar</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>orderBy_kID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_kPersonID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_kDatum</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_kBezugstabelle</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_kDatensatzID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_kKommentar</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>db</span> <span class='kw'>=</span> <span class='st'>"KURAS"</span>,
-  <span class='no'>...</span>
-)</pre>
+    <pre class="usage"><span class='fu'>kuras_kommentar</span><span class='op'>(</span>
+  where <span class='op'>=</span> <span class='cn'>NULL</span>,
+  where_kID <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_kPersonID <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_kDatum <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_kBezugstabelle <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_kDatensatzID <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_kKommentar <span class='op'>=</span> <span class='cn'>NA</span>,
+  select <span class='op'>=</span> <span class='cn'>NULL</span>,
+  select_kID <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_kPersonID <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_kDatum <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_kBezugstabelle <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_kDatensatzID <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_kKommentar <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy <span class='op'>=</span> <span class='cn'>NULL</span>,
+  orderBy_kID <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_kPersonID <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_kDatum <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_kBezugstabelle <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_kDatensatzID <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_kKommentar <span class='op'>=</span> <span class='cn'>NA</span>,
+  db <span class='op'>=</span> <span class='st'>"KURAS"</span>,
+  <span class='va'>...</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -271,13 +283,30 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
    </div>
 
   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.1/docsearch.min.js" integrity="sha256-GKvGqXDznoRYHCwKXGnuchvKSwmx9SRMrZOTh2g4Sb0=" crossorigin="anonymous"></script>
+<script>
+  docsearch({
+    
+    
+    apiKey: 'f702122c69b19cf5e593a9a0c1a1b606',
+    indexName: 'kwb_kuras_db',
+    inputSelector: 'input#search-input.form-control',
+    transformData: function(hits) {
+      return hits.map(function (hit) {
+        hit.url = updateHitURL(hit);
+        return hit;
+      });
+    }
+  });
+</script>
+
 
 
   </body>

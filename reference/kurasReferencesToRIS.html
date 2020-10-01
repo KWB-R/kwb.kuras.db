@@ -37,6 +37,12 @@
 <script src="../pkgdown.js"></script>
 
 
+<!-- docsearch -->
+<script src="../docsearch.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.3/docsearch.min.css" integrity="sha256-QOSRU/ra9ActyXkIBbiIB144aDBdtvXBcNc3OTNuX/Q=" crossorigin="anonymous" />
+<link href="../docsearch.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+
 
 
 <meta property="og:title" content="Write References to file in RIS (Research Information Systems) Format — kurasReferencesToRIS" />
@@ -112,6 +118,12 @@
 </li>
       </ul>
       
+      <form class="navbar-form navbar-right hidden-xs hidden-sm" role="search">
+        <div class="form-group">
+          <input type="search" class="form-control" name="search-input" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        </div>
+      </form>
+      
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
@@ -132,7 +144,7 @@
     <p>Write References to file in RIS (Research Information Systems) Format</p>
     </div>
 
-    <pre class="usage"><span class='fu'>kurasReferencesToRIS</span>(<span class='no'>references</span>)</pre>
+    <pre class="usage"><span class='fu'>kurasReferencesToRIS</span><span class='op'>(</span><span class='va'>references</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -150,16 +162,18 @@
     <p>path to the file created in the tempdir() folder</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
 <span class='co'># Get all entries from KURAS table "tblReferenz"</span>
-<span class='no'>references</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='kuras_referenz.html'>kuras_referenz</a></span>()
-
+<span class='va'>references</span> <span class='op'>&lt;-</span> <span class='fu'><a href='kuras_referenz.html'>kuras_referenz</a></span><span class='op'>(</span><span class='op'>)</span>
+  
 <span class='co'># Generate RIS-file in temporary folder</span>
-<span class='no'>file</span> <span class='kw'>&lt;-</span> <span class='fu'>kurasReferencesToRIS</span>(<span class='no'>references</span>)
+<span class='va'>file</span> <span class='op'>&lt;-</span> <span class='fu'>kurasReferencesToRIS</span><span class='op'>(</span><span class='va'>references</span><span class='op'>)</span>
 
 <span class='co'># Open the file in the Windows Explorer</span>
 <span class='co'># kwb.utils::hsOpenWindowsExplorer(file)</span>
-}</div></pre>
+<span class='op'>}</span>
+
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -175,13 +189,30 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
    </div>
 
   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.1/docsearch.min.js" integrity="sha256-GKvGqXDznoRYHCwKXGnuchvKSwmx9SRMrZOTh2g4Sb0=" crossorigin="anonymous"></script>
+<script>
+  docsearch({
+    
+    
+    apiKey: 'f702122c69b19cf5e593a9a0c1a1b606',
+    indexName: 'kwb_kuras_db',
+    inputSelector: 'input#search-input.form-control',
+    transformData: function(hits) {
+      return hits.map(function (hit) {
+        hit.url = updateHitURL(hit);
+        return hit;
+      });
+    }
+  });
+</script>
+
 
 
   </body>

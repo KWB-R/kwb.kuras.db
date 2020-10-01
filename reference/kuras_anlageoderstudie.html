@@ -37,6 +37,12 @@
 <script src="../pkgdown.js"></script>
 
 
+<!-- docsearch -->
+<script src="../docsearch.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.3/docsearch.min.css" integrity="sha256-QOSRU/ra9ActyXkIBbiIB144aDBdtvXBcNc3OTNuX/Q=" crossorigin="anonymous" />
+<link href="../docsearch.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+
 
 
 <meta property="og:title" content="select records from tblanlageoderstudie — kuras_anlageoderstudie" />
@@ -112,6 +118,12 @@
 </li>
       </ul>
       
+      <form class="navbar-form navbar-right hidden-xs hidden-sm" role="search">
+        <div class="form-group">
+          <input type="search" class="form-control" name="search-input" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        </div>
+      </form>
+      
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
@@ -132,82 +144,82 @@
     <p><code>select</code> and filter records from tblanlageoderstudie</p>
     </div>
 
-    <pre class="usage"><span class='fu'>kuras_anlageoderstudie</span>(
-  <span class='kw'>where</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>where_aID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_aName</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_aMassnahmenTypID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_aMassnahmenEbeneID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_aStandortID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_aAdresse</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_aKoordinateX</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_aKoordinateY</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_aEntwaesserungssystem</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_aBetreiberInstitutionID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_aInbetriebnahme</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_aAusserbetriebnahme</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_aBetriebsweise</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_aBeschreibung</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_aProjektID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_aFotoOrdner</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_aDokumentOrdner</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_aAngelegtAm</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_aAngelegtVonPersonID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_aGeaendert</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_aKoordinatensystem</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_aReferenzGruppeID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_aIstStudie</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>select_aID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_aName</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_aMassnahmenTypID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_aMassnahmenEbeneID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_aStandortID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_aAdresse</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_aKoordinateX</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_aKoordinateY</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_aEntwaesserungssystem</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_aBetreiberInstitutionID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_aInbetriebnahme</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_aAusserbetriebnahme</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_aBetriebsweise</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_aBeschreibung</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_aProjektID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_aFotoOrdner</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_aDokumentOrdner</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_aAngelegtAm</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_aAngelegtVonPersonID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_aGeaendert</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_aKoordinatensystem</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_aReferenzGruppeID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_aIstStudie</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>orderBy_aID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_aName</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_aMassnahmenTypID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_aMassnahmenEbeneID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_aStandortID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_aAdresse</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_aKoordinateX</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_aKoordinateY</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_aEntwaesserungssystem</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_aBetreiberInstitutionID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_aInbetriebnahme</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_aAusserbetriebnahme</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_aBetriebsweise</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_aBeschreibung</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_aProjektID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_aFotoOrdner</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_aDokumentOrdner</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_aAngelegtAm</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_aAngelegtVonPersonID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_aGeaendert</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_aKoordinatensystem</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_aReferenzGruppeID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_aIstStudie</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>db</span> <span class='kw'>=</span> <span class='st'>"KURAS"</span>,
-  <span class='no'>...</span>
-)</pre>
+    <pre class="usage"><span class='fu'>kuras_anlageoderstudie</span><span class='op'>(</span>
+  where <span class='op'>=</span> <span class='cn'>NULL</span>,
+  where_aID <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_aName <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_aMassnahmenTypID <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_aMassnahmenEbeneID <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_aStandortID <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_aAdresse <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_aKoordinateX <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_aKoordinateY <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_aEntwaesserungssystem <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_aBetreiberInstitutionID <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_aInbetriebnahme <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_aAusserbetriebnahme <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_aBetriebsweise <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_aBeschreibung <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_aProjektID <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_aFotoOrdner <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_aDokumentOrdner <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_aAngelegtAm <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_aAngelegtVonPersonID <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_aGeaendert <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_aKoordinatensystem <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_aReferenzGruppeID <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_aIstStudie <span class='op'>=</span> <span class='cn'>NA</span>,
+  select <span class='op'>=</span> <span class='cn'>NULL</span>,
+  select_aID <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_aName <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_aMassnahmenTypID <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_aMassnahmenEbeneID <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_aStandortID <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_aAdresse <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_aKoordinateX <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_aKoordinateY <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_aEntwaesserungssystem <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_aBetreiberInstitutionID <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_aInbetriebnahme <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_aAusserbetriebnahme <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_aBetriebsweise <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_aBeschreibung <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_aProjektID <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_aFotoOrdner <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_aDokumentOrdner <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_aAngelegtAm <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_aAngelegtVonPersonID <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_aGeaendert <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_aKoordinatensystem <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_aReferenzGruppeID <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_aIstStudie <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy <span class='op'>=</span> <span class='cn'>NULL</span>,
+  orderBy_aID <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_aName <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_aMassnahmenTypID <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_aMassnahmenEbeneID <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_aStandortID <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_aAdresse <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_aKoordinateX <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_aKoordinateY <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_aEntwaesserungssystem <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_aBetreiberInstitutionID <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_aInbetriebnahme <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_aAusserbetriebnahme <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_aBetriebsweise <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_aBeschreibung <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_aProjektID <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_aFotoOrdner <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_aDokumentOrdner <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_aAngelegtAm <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_aAngelegtVonPersonID <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_aGeaendert <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_aKoordinatensystem <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_aReferenzGruppeID <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_aIstStudie <span class='op'>=</span> <span class='cn'>NA</span>,
+  db <span class='op'>=</span> <span class='st'>"KURAS"</span>,
+  <span class='va'>...</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -526,13 +538,30 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
    </div>
 
   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.1/docsearch.min.js" integrity="sha256-GKvGqXDznoRYHCwKXGnuchvKSwmx9SRMrZOTh2g4Sb0=" crossorigin="anonymous"></script>
+<script>
+  docsearch({
+    
+    
+    apiKey: 'f702122c69b19cf5e593a9a0c1a1b606',
+    indexName: 'kwb_kuras_db',
+    inputSelector: 'input#search-input.form-control',
+    transformData: function(hits) {
+      return hits.map(function (hit) {
+        hit.url = updateHitURL(hit);
+        return hit;
+      });
+    }
+  });
+</script>
+
 
 
   </body>

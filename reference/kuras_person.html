@@ -37,6 +37,12 @@
 <script src="../pkgdown.js"></script>
 
 
+<!-- docsearch -->
+<script src="../docsearch.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.3/docsearch.min.css" integrity="sha256-QOSRU/ra9ActyXkIBbiIB144aDBdtvXBcNc3OTNuX/Q=" crossorigin="anonymous" />
+<link href="../docsearch.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+
 
 
 <meta property="og:title" content="select records from tblperson — kuras_person" />
@@ -112,6 +118,12 @@
 </li>
       </ul>
       
+      <form class="navbar-form navbar-right hidden-xs hidden-sm" role="search">
+        <div class="form-group">
+          <input type="search" class="form-control" name="search-input" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        </div>
+      </form>
+      
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
@@ -132,34 +144,34 @@
     <p><code>select</code> and filter records from tblperson</p>
     </div>
 
-    <pre class="usage"><span class='fu'>kuras_person</span>(
-  <span class='kw'>where</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>where_pnID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_pnInitialien</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_pnVorname</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_pnNachname</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_pnInstitutionID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_pnAdresse</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>where_pnTelefon</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>select_pnID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_pnInitialien</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_pnVorname</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_pnNachname</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_pnInstitutionID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_pnAdresse</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>select_pnTelefon</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>orderBy_pnID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_pnInitialien</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_pnVorname</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_pnNachname</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_pnInstitutionID</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_pnAdresse</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>orderBy_pnTelefon</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>db</span> <span class='kw'>=</span> <span class='st'>"KURAS"</span>,
-  <span class='no'>...</span>
-)</pre>
+    <pre class="usage"><span class='fu'>kuras_person</span><span class='op'>(</span>
+  where <span class='op'>=</span> <span class='cn'>NULL</span>,
+  where_pnID <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_pnInitialien <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_pnVorname <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_pnNachname <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_pnInstitutionID <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_pnAdresse <span class='op'>=</span> <span class='cn'>NA</span>,
+  where_pnTelefon <span class='op'>=</span> <span class='cn'>NA</span>,
+  select <span class='op'>=</span> <span class='cn'>NULL</span>,
+  select_pnID <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_pnInitialien <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_pnVorname <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_pnNachname <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_pnInstitutionID <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_pnAdresse <span class='op'>=</span> <span class='cn'>NA</span>,
+  select_pnTelefon <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy <span class='op'>=</span> <span class='cn'>NULL</span>,
+  orderBy_pnID <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_pnInitialien <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_pnVorname <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_pnNachname <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_pnInstitutionID <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_pnAdresse <span class='op'>=</span> <span class='cn'>NA</span>,
+  orderBy_pnTelefon <span class='op'>=</span> <span class='cn'>NA</span>,
+  db <span class='op'>=</span> <span class='st'>"KURAS"</span>,
+  <span class='va'>...</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -286,13 +298,30 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
    </div>
 
   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.1/docsearch.min.js" integrity="sha256-GKvGqXDznoRYHCwKXGnuchvKSwmx9SRMrZOTh2g4Sb0=" crossorigin="anonymous"></script>
+<script>
+  docsearch({
+    
+    
+    apiKey: 'f702122c69b19cf5e593a9a0c1a1b606',
+    indexName: 'kwb_kuras_db',
+    inputSelector: 'input#search-input.form-control',
+    transformData: function(hits) {
+      return hits.map(function (hit) {
+        hit.url = updateHitURL(hit);
+        return hit;
+      });
+    }
+  });
+</script>
+
 
 
   </body>
