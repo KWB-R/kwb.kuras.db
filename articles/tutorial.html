@@ -87,7 +87,8 @@
 
       
 
-      </header><script src="tutorial_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+      </header><script src="tutorial_files/accessible-code-block-0.0.1/empty-anchor.js"></script><link href="tutorial_files/anchor-sections-1.0/anchor-sections.css" rel="stylesheet">
+<script src="tutorial_files/anchor-sections-1.0/anchor-sections.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Auswertung der KURAS-Datenbank</h1>
@@ -113,40 +114,40 @@
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>Installieren Sie das Paket kwb.kuras.db und alle davon abhängigen Pakete:</p>
-<div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="co"># install.packages("remotes")</span>
-<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"kwb-r/kwb.kuras.db"</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># install.packages("remotes")</span>
+<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"kwb-r/kwb.kuras.db"</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="verwendung-des-pakets" class="section level2">
 <h2 class="hasAnchor">
 <a href="#verwendung-des-pakets" class="anchor"></a>Verwendung des Pakets</h2>
 <p>Laden Sie das Paket kwb.kuras.db:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit">
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/KWB-R/kwb.kuras.db">kwb.kuras.db</a></span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/KWB-R/kwb.kuras.db">kwb.kuras.db</a></span><span class="op">)</span></code></pre></div>
 <p>Das Paket wird geladen.</p>
 <p>Das Paket enthält zu jeder Tabelle eine Zugriffsfunktion, deren Name mit “kuras_” beginnt und mit dem Tabellennamen endet. So gibt die Funktion <code>kuras_effekt</code> zum Beispiel Zugriff auf die Tabelle tblEffekt in der KURAS-Datenbank.</p>
 <p>Mit dem folgenden Aufruf lädt man alle in der Datenbank eingetragenen Effekte in die Variable <code>effekte</code>:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit">
-<span class="va">effekte</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/kuras_effekt.html">kuras_effekt</a></span><span class="op">(</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">effekte</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/kuras_effekt.html">kuras_effekt</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p>Die Ausgabe zeigt, welche SQL-Abfrage im Hintergrund an die Datenbank geschickt wurde und wie viele Zeilen (records) und Spalten (fields) von der Datenbank geliefert wurden.</p>
 <p>In R existiert die Tabelle nun in Form eines Objekts vom Typ “data.frame”. Es sieht wie folgt aus:</p>
-<div class="sourceCode" id="cb4"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="va">effekte</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="va">effekte</span><span class="op">)</span></code></pre></div>
 <p>Alle Funktionen unterstützen Aufrufparameter, mit denen sich die Datensätze filtern und sortieren lassen.</p>
 <p>Mit dem Aufrufparameter <code>select</code> lassen sich einzelne Spalten aus- und abwählen. Der folgende Aufruf zum Beispiel lädt die Effekte-Tabelle ohne die dritte Spalte (eBeschreibung):</p>
-<div class="sourceCode" id="cb5"><pre class="downlit">
-<span class="va">effekte</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/kuras_effekt.html">kuras_effekt</a></span><span class="op">(</span>select <span class="op">=</span> <span class="op">-</span><span class="fl">3</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">effekte</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/kuras_effekt.html">kuras_effekt</a></span><span class="op">(</span>select <span class="op">=</span> <span class="op">-</span><span class="fl">3</span><span class="op">)</span></code></pre></div>
 <p>Wir überprüfen das Ergebnis:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="va">effekte</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="va">effekte</span><span class="op">)</span></code></pre></div>
 <p>In ähnlicher Weise lassen sich alle definierten Indikatoren mit Hilfe der Funktion <code>kuras_indikator</code> laden. Im folgenden werden die Spalten 1 (iID) sowie fünf bis acht gleich ausgelassen:</p>
-<div class="sourceCode" id="cb7"><pre class="downlit">
-<span class="va">indikatoren</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/kuras_indikator.html">kuras_indikator</a></span><span class="op">(</span>select <span class="op">=</span> <span class="op">-</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">5</span><span class="op">:</span><span class="fl">8</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">indikatoren</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/kuras_indikator.html">kuras_indikator</a></span><span class="op">(</span>select <span class="op">=</span> <span class="op">-</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">5</span><span class="op">:</span><span class="fl">8</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <p>Und so sieht die Indikatorentabelle nun in R aus:</p>
-<div class="sourceCode" id="cb8"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="va">indikatoren</span><span class="op">)</span></pre></div>
-<div class="sourceCode" id="cb9"><pre class="downlit">
-<span class="va">indikatoren.x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/merge.html">merge</a></span><span class="op">(</span><span class="va">indikatoren</span>, <span class="va">effekte</span>, by.x <span class="op">=</span> <span class="st">"iEffektID"</span>, by.y <span class="op">=</span> <span class="st">"eID"</span><span class="op">)</span>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="va">indikatoren</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">indikatoren.x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/merge.html">merge</a></span><span class="op">(</span><span class="va">indikatoren</span>, <span class="va">effekte</span>, by.x <span class="op">=</span> <span class="st">"iEffektID"</span>, by.y <span class="op">=</span> <span class="st">"eID"</span><span class="op">)</span>
 <span class="va">anlagenOderStudien</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/kuras_anlageoderstudie.html">kuras_anlageoderstudie</a></span><span class="op">(</span><span class="op">)</span>
 <span class="va">anlagen</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/kuras_anlageoderstudie.html">kuras_anlageoderstudie</a></span><span class="op">(</span>where_aIstStudie <span class="op">=</span> <span class="st">"=  0"</span><span class="op">)</span>
 <span class="va">studien</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/kuras_anlageoderstudie.html">kuras_anlageoderstudie</a></span><span class="op">(</span>where_aIstStudie <span class="op">=</span> <span class="st">"= -1"</span><span class="op">)</span>
@@ -157,7 +158,7 @@
 
 <span class="fu"><a href="https://rdrr.io/r/base/cat.html">cat</a></span><span class="op">(</span><span class="st">"Aufteilung der Anlagen auf Misch-(M)- und Trenn-(T)-System:\n"</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/aggregate.html">aggregate</a></span><span class="op">(</span><span class="va">anlagen</span><span class="op">$</span><span class="va">aID</span>, by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>EW_System<span class="op">=</span><span class="va">anlagen</span><span class="op">$</span><span class="va">aEntwaesserungssystem</span><span class="op">)</span>, 
-                FUN<span class="op">=</span><span class="va">length</span><span class="op">)</span><span class="op">)</span></pre></div>
+                FUN<span class="op">=</span><span class="va">length</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 </div>
   </div>
 
