@@ -1,30 +1,27 @@
-[![Appveyor build Status](https://ci.appveyor.com/api/projects/status/github/KWB-R/kwb.kuras.db?branch=master&svg=true)](https://ci.appveyor.com/project/KWB-R/kwb-kuras-db/branch/master)
-[![Travis build Status](https://travis-ci.org/KWB-R/kwb.kuras.db.svg?branch=master)](https://travis-ci.org/KWB-R/kwb.kuras.db)
-[![codecov](https://codecov.io/github/KWB-R/kwb.kuras.db/branch/master/graphs/badge.svg)](https://codecov.io/github/KWB-R/kwb.kuras.db)
+[![R-CMD-check](https://github.com/KWB-R/kwb.kuras.db/workflows/R-CMD-check/badge.svg)](https://github.com/KWB-R/kwb.kuras.db/actions?query=workflow%3AR-CMD-check)
+[![pkgdown](https://github.com/KWB-R/kwb.kuras.db/workflows/pkgdown/badge.svg)](https://github.com/KWB-R/kwb.kuras.db/actions?query=workflow%3Apkgdown)
+[![codecov](https://codecov.io/github/KWB-R/kwb.kuras.db/branch/main/graphs/badge.svg)](https://codecov.io/github/KWB-R/kwb.kuras.db)
 [![Project Status](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/kwb.kuras.db)]()
+[![R-Universe_Status_Badge](https://kwb-r.r-universe.dev/badges/kwb.kuras.db)](https://kwb-r.r-universe.dev/)
 
-This package provides functions to read from
-the database that was developed during the KWB project KURAS
-(https://www.kompetenz-wasser.de/de/project/kuras/).
+This package provides functions to read from the database that was developed during the KWB project [KURAS](https://www.kompetenz-wasser.de/en/forschung/projekte/kuras).
 
 ## Installation
 
-For details on how to install KWB-R packages checkout our [installation tutorial](https://kwb-r.github.io/kwb.pkgbuild/articles/install.html).
+For installing the latest release of this R package run the following code below:
 
 ```r
-### Optionally: specify GitHub Personal Access Token (GITHUB_PAT)
-### See here why this might be important for you:
-### https://kwb-r.github.io/kwb.pkgbuild/articles/install.html#set-your-github_pat
+# Enable repository from kwb-r
+options(repos = c(
+  kwbr = 'https://kwb-r.r-universe.dev',
+  CRAN = 'https://cloud.r-project.org'))
 
-# Sys.setenv(GITHUB_PAT = "mysecret_access_token")
+# Download and install kwb.kuras in R
+install.packages('kwb.kuras')
 
-# Install package "remotes" from CRAN
-if (! require("remotes")) {
-  install.packages("remotes", repos = "https://cloud.r-project.org")
-}
+# Browse the kwb.kuras manual pages
+help(package = 'kwb.kuras')
 
-# Install KWB package 'kwb.kuras.db' from GitHub
-
-remotes::install_github("KWB-R/kwb.kuras.db")
 ```
+
